@@ -1,0 +1,76 @@
+---
+interface Props {
+  t: (key: string) => string;
+}
+const { t } = Astro.props;
+---
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p class="footer-text">
+      {t('footer.made_with')}
+      <span aria-hidden="true" style="color: #2c9cc3;">♥</span>
+      {t('footer.and')}
+      <i class="devicon-astro-plain footer-astro-icon" aria-label="Astro" title="Astro"></i>
+      {t('footer.by')}
+    </p>
+    <a href="#" class="footer-top" aria-label="Back to top">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 12V4M8 4L4 8M8 4L12 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-block: 1.75rem;
+  }
+
+  .footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-text {
+    font-size: 0.8125rem;
+    color: #475569;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-top {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+    color: #64748b;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  .footer-top:hover {
+    color: #f1f5f9;
+    border-color: rgba(44, 156, 195, 0.4);
+    background: rgba(35, 125, 157, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .footer-astro-icon {
+    font-size: 1rem;
+    vertical-align: middle;
+    color: #FF5D01;
+  }
+</style>

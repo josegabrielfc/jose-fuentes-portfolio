@@ -1,0 +1,71 @@
+{
+  "nav": {
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "skills": "Stack",
+    "experience": "Experiencia",
+    "contact": "Contacto",
+    "hire": "Contrátame"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "José Fuentes",
+    "role": "Software Developer",
+    "tagline": "Construyo experiencias web premium que son rápidas, accesibles e impecables.",
+    "cta_primary": "Ver proyectos",
+    "cta_secondary": "Descargar CV",
+    "scroll": "Desplazar"
+  },
+  "about": {
+    "section_label": "Sobre mí",
+    "heading": "Convirtiendo ideas en\nproductos extraordinarios",
+    "bio_1": "Desarrollador Full Stack enfocado en frontend, con más de 2 años de experiencia construyendo aplicaciones web y móviles escalables de alto rendimiento. Experiencia en el desarrollo de interfaces responsivas, componentes reutilizables y módulos web eficientes, así como en servicios backend incluyendo APIs y microservicios en diversos sectores tecnológicos.",
+    "bio_2": "Comprometido con escribir código limpio y mantenible, y con construir experiencias de usuario fluidas, con un fuerte enfoque en rendimiento, escalabilidad y arquitecturas eficientes. Experiencia trabajando en entornos colaborativos, traduciendo necesidades complejas en soluciones técnicas, mejorando continuamente los flujos de desarrollo y procesos para entregar resultados confiables y de alta calidad.",
+    "stat_years": "Años de experiencia",
+    "stat_projects": "Proyectos entregados",
+    "stat_technologies": "Tecnologías usadas",
+    "stat_years_value": "2+",
+    "stat_projects_value": "10+",
+    "stat_technologies_value": "30+"
+  },
+  "projects": {
+    "section_label": "Proyectos",
+    "heading": "Trabajo seleccionado",
+    "subheading": "Una selección de proyectos que he construido — desde side projects hasta aplicaciones en producción.",
+    "live": "Ver en vivo",
+    "code": "Código",
+    "all": "Todos",
+    "empty": "No se encontraron proyectos.",
+    "more": "Ver más",
+    "less": "Ver menos"
+  },
+  "skills": {
+    "section_label": "Stack Técnico",
+    "heading": "Tecnologías con las que trabajo",
+    "subheading": "Una selección de herramientas y frameworks que uso para construir grandes productos.",
+    "frontend": "Frontend",
+    "styling": "Estilos",
+    "tooling": "Herramientas y DevOps",
+    "other": "Otros"
+  },
+  "experience": {
+    "section_label": "Experiencia",
+    "heading": "Historial laboral",
+    "subheading": "Una línea de tiempo de las empresas y proyectos que moldearon mi carrera."
+  },
+  "contact": {
+    "section_label": "Contacto",
+    "heading": "Trabajemos juntos",
+    "subheading": "Abierto a posiciones full-time, proyectos freelance y colaboraciones interesantes. Construyamos algo genial.",
+    "email_label": "Email",
+    "copy": "Copiar",
+    "copied": "¡Copiado!",
+    "or": "o encuéntrame en"
+  },
+  "footer": {
+    "made_with": "Creado con",
+    "and": "y",
+    "by": "por José Fuentes",
+    "rights": "Todos los derechos reservados."
+  }
+}

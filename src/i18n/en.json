@@ -1,0 +1,71 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "experience": "Experience",
+    "contact": "Contact",
+    "hire": "Hire me"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "José Fuentes",
+    "role": "Software Developer",
+    "tagline": "I build premium web experiences that are fast, accessible, and delightful.",
+    "cta_primary": "View my work",
+    "cta_secondary": "Download CV",
+    "scroll": "Scroll down"
+  },
+  "about": {
+    "section_label": "About me",
+    "heading": "Turning ideas into\nremarkable products",
+    "bio_1": "Full Stack Developer focused on frontend with 2+ years of experience building high-performance, scalable web and mobile applications. Experienced in developing responsive interfaces, reusable UI components, and efficient web modules, along with backend services including APIs and microservices across diverse technology sectors.",
+    "bio_2": "Committed to clean, maintainable code and seamless user experiences, with a strong emphasis on performance, scalability, and efficient architectures. Experienced in collaborative environments, translating complex needs into technical solutions while continuously improving workflows and development processes to deliver reliable, high-quality results.",
+    "stat_years": "Years of experience",
+    "stat_projects": "Projects delivered",
+    "stat_technologies": "Technologies used",
+    "stat_years_value": "2+",
+    "stat_projects_value": "10+",
+    "stat_technologies_value": "30+"
+  },
+  "projects": {
+    "section_label": "Projects",
+    "heading": "Selected work",
+    "subheading": "A curated selection of projects I've built — from side projects to production-ready applications.",
+    "live": "Live",
+    "code": "Code",
+    "all": "All",
+    "empty": "No projects found.",
+    "more": "See more",
+    "less": "See less"
+  },
+  "skills": {
+    "section_label": "Tech Stack",
+    "heading": "Technologies I work with",
+    "subheading": "A selection of tools and frameworks I use to build great products.",
+    "frontend": "Frontend",
+    "styling": "Styling",
+    "tooling": "Tooling & DevOps",
+    "other": "Other"
+  },
+  "experience": {
+    "section_label": "Experience",
+    "heading": "Work history",
+    "subheading": "A timeline of the companies and projects that shaped my career."
+  },
+  "contact": {
+    "section_label": "Contact",
+    "heading": "Let's work together",
+    "subheading": "Open to full-time roles, freelance projects, and interesting collaborations. Let's build something great.",
+    "email_label": "Email",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "or": "or find me on"
+  },
+  "footer": {
+    "made_with": "Crafted with",
+    "and": "and",
+    "by": "by José Fuentes",
+    "rights": "All rights reserved."
+  }
+}

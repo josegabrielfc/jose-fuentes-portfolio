@@ -1,19 +1,18 @@
 @import "tailwindcss";
 
-/* ─── Design Tokens ───────────────────────────────────────────── */
-@theme {
-  /* Dynamic themed colors */
+/* ─── Theme CSS Variables (dark default) ──────────────────────── */
+:root {
+  /* Design Tokens (picked up by Tailwind 4 automatically) */
   --color-bg: var(--th-bg);
   --color-surface: var(--th-surface);
   --color-surface-hover: var(--th-surface-hover);
   --color-border: var(--th-border);
   --color-border-hover: var(--th-border-hover);
-
+  
   --color-text-1: var(--th-text-1);
   --color-text-2: var(--th-text-2);
   --color-text-3: var(--th-text-3);
 
-  /* Static branding colors (premium feel) */
   --color-accent: var(--th-accent);
   --color-accent-light: var(--th-accent-light);
   --color-accent-lighter: var(--th-accent-lighter);
@@ -21,18 +20,14 @@
   --color-mint: #5dc1b9; 
   --color-mint-dark: #338b85;
 
-  /* Selection tokens */
   --color-selection-bg: var(--th-selection-bg);
   --color-selection-text: var(--th-selection-text);
 
-  /* Fonts */
   --font-sans: 'Space Grotesk', 'Inter', system-ui, -apple-system, sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
-}
 
-/* ─── Theme CSS Variables (dark default) ──────────────────────── */
-:root {
+  /* Theme variables initialization */
   --th-bg: #030712;
   --th-bg-nav: rgba(3, 7, 18, 0.8);
   --th-surface: rgba(255, 255, 255, 0.05);

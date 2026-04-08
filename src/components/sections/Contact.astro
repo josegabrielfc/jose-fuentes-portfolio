@@ -123,8 +123,8 @@ const socials = [
     position: relative;
     padding: 4rem 2rem;
     border-radius: 24px;
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--th-border);
+    background: var(--th-surface);
   }
 
   .contact-glow {
@@ -133,7 +133,7 @@ const socials = [
     border-radius: 24px;
     background: radial-gradient(
       ellipse 80% 60% at 50% 0%,
-      rgba(35, 125, 157, 0.12),
+      var(--th-contact-glow),
       transparent
     );
     pointer-events: none;
@@ -146,13 +146,13 @@ const socials = [
 
   .contact-heading {
     font-size: clamp(2rem, 5vw, 3rem);
-    color: #f1f5f9;
+    color: var(--th-text-1);
     margin: 0 0 1rem;
   }
 
   .contact-sub {
     font-size: 0.9375rem;
-    color: #64748b;
+    color: var(--th-text-2);
     line-height: 1.65;
     margin: 0 0 2.5rem;
   }
@@ -161,8 +161,8 @@ const socials = [
   .email-block {
     margin-bottom: 1.75rem;
     text-align: left;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.07);
+    background: var(--th-surface);
+    border: 1px solid var(--th-border);
     border-radius: 12px;
     padding: 1rem 1.25rem;
   }
@@ -173,7 +173,7 @@ const socials = [
     font-family: "JetBrains Mono", monospace;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #475569;
+    color: var(--th-text-3);
     margin-bottom: 6px;
   }
 
@@ -188,13 +188,13 @@ const socials = [
   .email-text {
     font-size: 0.9375rem;
     font-weight: 500;
-    color: #f1f5f9;
+    color: var(--th-text-1);
     text-decoration: none;
     transition: color 0.2s ease;
   }
 
   .email-text:hover {
-    color: #2c9cc3;
+    color: var(--color-accent-light);
   }
 
   .copy-btn {
@@ -204,9 +204,9 @@ const socials = [
     gap: 6px;
     padding: 6px 12px;
     border-radius: 7px;
-    background: rgba(35, 125, 157, 0.12);
-    border: 1px solid rgba(35, 125, 157, 0.2);
-    color: #2c9cc3;
+    background: var(--th-toggle-bg-hover);
+    border: 1px solid var(--th-toggle-border-hover);
+    color: var(--color-accent-light);
     font-size: 0.75rem;
     font-weight: 500;
     cursor: pointer;
@@ -215,8 +215,8 @@ const socials = [
   }
 
   .copy-btn:hover {
-    background: rgba(35, 125, 157, 0.2);
-    border-color: rgba(44, 156, 195, 0.4);
+    background: var(--th-toggle-bg-hover);
+    border-color: var(--th-toggle-border-hover);
   }
 
   .icon-slot {
@@ -281,12 +281,12 @@ const socials = [
   .divider-line {
     flex: 1;
     height: 1px;
-    background: rgba(255, 255, 255, 0.06);
+    background: var(--th-border);
   }
 
   .divider-text {
     font-size: 0.75rem;
-    color: #475569;
+    color: var(--th-text-3);
     font-family: "JetBrains Mono", monospace;
     white-space: nowrap;
   }
@@ -305,7 +305,7 @@ const socials = [
     gap: 8px;
     padding: 10px 18px;
     border-radius: 10px;
-    color: #94a3b8;
+    color: var(--th-text-2);
     text-decoration: none;
     font-size: 0.875rem;
     font-weight: 500;
@@ -313,7 +313,7 @@ const socials = [
   }
 
   .social-link:hover {
-    color: #f1f5f9;
+    color: var(--th-text-1);
     transform: translateY(-2px);
   }
 </style>

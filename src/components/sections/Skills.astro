@@ -440,13 +440,13 @@ const row2: Tech[] = [
 
   .skills-heading {
     font-size: clamp(1.875rem, 4vw, 2.75rem);
-    color: #f1f5f9;
+    color: var(--th-text-1);
     margin: 0 0 0.75rem;
   }
 
   .skills-sub {
     font-size: 0.9375rem;
-    color: #64748b;
+    color: var(--th-text-2);
     max-width: 520px;
     line-height: 1.65;
     margin: 0 0 3rem;
@@ -480,14 +480,14 @@ const row2: Tech[] = [
 
   .marquee-fade-left {
     left: 0;
-    background: -webkit-linear-gradient(left, #030712 0%, transparent 100%);
-    background: linear-gradient(to right, #030712 0%, transparent 100%);
+    background: -webkit-linear-gradient(left, var(--th-bg) 0%, transparent 100%);
+    background: linear-gradient(to right, var(--th-bg) 0%, transparent 100%);
   }
 
   .marquee-fade-right {
     right: 0;
-    background: -webkit-linear-gradient(right, #030712 0%, transparent 100%);
-    background: linear-gradient(to left, #030712 0%, transparent 100%);
+    background: -webkit-linear-gradient(right, var(--th-bg) 0%, transparent 100%);
+    background: linear-gradient(to left, var(--th-bg) 0%, transparent 100%);
   }
 
   /* ─── Track ───────────────────────────────────────────────────── */
@@ -580,8 +580,8 @@ const row2: Tech[] = [
     gap: 6px;
     padding: 14px 18px;
     border-radius: 14px;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--th-surface);
+    border: 1px solid var(--th-border);
     cursor: pointer;
     text-decoration: none;
     -webkit-transition:
@@ -604,8 +604,8 @@ const row2: Tech[] = [
   }
 
   .tech-pill:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(44, 156, 195, 0.3);
+    background: var(--th-surface-hover);
+    border-color: var(--th-border-hover);
     -webkit-transform: translateY(-3px);
     transform: translateY(-3px);
   }
@@ -653,7 +653,7 @@ const row2: Tech[] = [
   .tech-label {
     font-size: 0.7rem;
     font-weight: 500;
-    color: #475569;
+    color: var(--th-text-3);
     white-space: nowrap;
     -webkit-transition: color 0.2s ease;
     transition: color 0.2s ease;
@@ -664,7 +664,7 @@ const row2: Tech[] = [
   }
 
   .tech-pill:hover .tech-label {
-    color: #94a3b8;
+    color: var(--th-text-2);
   }
 
   /* ─── Reduced motion ──────────────────────────────────────────── */

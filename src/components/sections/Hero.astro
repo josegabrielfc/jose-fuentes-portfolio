@@ -95,13 +95,14 @@ const { t } = Astro.props;
     position: absolute;
     border-radius: 50%;
     filter: blur(80px);
-    opacity: 0.35;
+    opacity: var(--th-blob-opacity);
+    transition: opacity 0.3s ease;
   }
 
   .hero-blob-1 {
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, #237d9d 0%, transparent 70%);
+    background: radial-gradient(circle, var(--th-blob-1) 0%, transparent 75%);
     top: -200px;
     right: -100px;
     animation: float1 12s ease-in-out infinite;
@@ -110,20 +111,20 @@ const { t } = Astro.props;
   .hero-blob-2 {
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, #06b6d4 0%, transparent 70%);
+    background: radial-gradient(circle, var(--th-blob-2) 0%, transparent 75%);
     bottom: -100px;
     left: -50px;
-    opacity: 0.2;
+    opacity: var(--th-blob-2-opacity);
     animation: float2 15s ease-in-out infinite;
   }
 
   .hero-blob-3 {
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, #2c9cc3 0%, transparent 70%);
+    background: radial-gradient(circle, var(--th-blob-3) 0%, transparent 75%);
     top: 40%;
     left: 40%;
-    opacity: 0.15;
+    opacity: var(--th-blob-3-opacity);
     animation: float3 10s ease-in-out infinite;
   }
 
@@ -131,8 +132,8 @@ const { t } = Astro.props;
     position: absolute;
     inset: 0;
     background-image:
-      linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+      linear-gradient(var(--th-border-hero-grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--th-border-hero-grid) 1px, transparent 1px);
     background-size: 60px 60px;
     mask-image: radial-gradient(
       ellipse 70% 70% at 50% 50%,
@@ -199,8 +200,8 @@ const { t } = Astro.props;
     gap: 8px;
     padding: 6px 14px;
     border-radius: 99px;
-    background: rgba(35, 125, 157, 0.12);
-    border: 1px solid rgba(35, 125, 157, 0.25);
+    background: var(--th-toggle-bg-hover);
+    border: 1px solid var(--th-toggle-border-hover);
     font-size: 0.8125rem;
     font-weight: 500;
     color: #7bc2eb;
@@ -212,8 +213,8 @@ const { t } = Astro.props;
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: #2c9cc3;
-    box-shadow: 0 0 6px #2c9cc3;
+    background: var(--color-accent-light);
+    box-shadow: 0 0 6px var(--color-accent-light);
     animation: pulse-dot 2s ease-in-out infinite;
   }
 
@@ -221,11 +222,11 @@ const { t } = Astro.props;
     0%,
     100% {
       opacity: 1;
-      box-shadow: 0 0 6px #2c9cc3;
+      box-shadow: 0 0 6px var(--color-accent-light);
     }
     50% {
       opacity: 0.6;
-      box-shadow: 0 0 12px #2c9cc3;
+      box-shadow: 0 0 12px var(--color-accent-light);
     }
   }
 
@@ -244,14 +245,14 @@ const { t } = Astro.props;
     font-family: "Space Grotesk", sans-serif;
     font-size: clamp(1.25rem, 3vw, 1.75rem);
     font-weight: 600;
-    color: #64748b;
+    color: var(--th-text-3);
     margin: 0 0 1.25rem;
     letter-spacing: -0.01em;
   }
 
   .hero-tagline {
     font-size: clamp(1rem, 2vw, 1.125rem);
-    color: #64748b;
+    color: var(--th-text-3);
     max-width: 520px;
     line-height: 1.65;
     margin: 0 0 2.5rem;
@@ -294,9 +295,9 @@ const { t } = Astro.props;
     gap: 8px;
     padding: 12px 24px;
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #94a3b8;
+    background: var(--th-surface);
+    border: 1px solid var(--th-border);
+    color: var(--th-text-2);
     font-weight: 500;
     font-size: 0.9375rem;
     text-decoration: none;
@@ -305,9 +306,9 @@ const { t } = Astro.props;
   }
 
   .cta-secondary:hover {
-    color: #f1f5f9;
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.18);
+    color: var(--th-text-1);
+    background: var(--th-surface-hover);
+    border-color: var(--th-border-hover);
     transform: translateY(-2px);
   }
 
@@ -317,14 +318,14 @@ const { t } = Astro.props;
     align-items: center;
     gap: 12px;
     margin-top: 4rem;
-    color: #475569;
+    color: var(--th-text-3);
   }
 
   .scroll-line {
     display: block;
     width: 40px;
     height: 1px;
-    background: linear-gradient(90deg, #237d9d, transparent);
+    background: linear-gradient(90deg, var(--color-accent), transparent);
     position: relative;
     overflow: hidden;
   }
@@ -336,7 +337,7 @@ const { t } = Astro.props;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: #2c9cc3;
+    background: var(--color-accent-light);
     animation: slide-right 2s ease-in-out infinite;
   }
 

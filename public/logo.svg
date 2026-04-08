@@ -3,7 +3,7 @@
  preserveAspectRatio="xMidYMid meet" aria-label="JF Logo">
 
 <g transform="translate(0.000000,992.000000) scale(0.100000,-0.100000)"
-fill="#ffffff" stroke="none">
+fill="currentColor" stroke="none">
 <path d="M7895 8610 c-1843 -4 -2325 -8 -2342 -18 -12 -7 -35 -29 -50 -49
 l-28 -36 -6 -3001 c-4 -2287 -8 -3022 -18 -3091 -23 -169 -73 -341 -127 -433
 -40 -67 -151 -179 -217 -218 -137 -80 -351 -125 -597 -125 -352 0 -621 75

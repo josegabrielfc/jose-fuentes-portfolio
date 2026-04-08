@@ -93,6 +93,65 @@ const fontsUrl =
     </noscript>
 
     <ClientRouter />
+
+    <!--
+      ─── Theme bootstrap (blocking, before paint) ─────────────────────────
+      Must be inline & synchronous so the class is applied before CSS is
+      evaluated, preventing any flash of the wrong theme on reload.
+    -->
+    <script is:inline>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var prefersDark = window.matchMedia(
+            "(prefers-color-scheme: dark)",
+          ).matches;
+          var theme =
+            stored === "light" || stored === "dark"
+              ? stored
+              : prefersDark
+                ? "dark"
+                : "light";
+          document.documentElement.classList.add(theme);
+        } catch (e) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+
+      /*
+        ─── Theme persistence across Astro View Transitions ──────────────────
+        When ClientRouter navigates (e.g., EN ↔ ES language switch), Astro
+        replaces the entire <html> element with the incoming page's <html>.
+        The new <html> has no theme class, so the theme resets to dark.
+
+        Fix:
+          astro:before-swap  → copy the current theme class onto the
+                               incoming document's <html> BEFORE the swap.
+          astro:after-swap   → re-apply theme from localStorage in case the
+                               incoming document carried wrong state.
+      */
+      document.addEventListener("astro:before-swap", function (e) {
+        var currentTheme = document.documentElement.classList.contains("light")
+          ? "light"
+          : "dark";
+        /* e.newDocument is the incoming document before it replaces the DOM */
+        e.newDocument.documentElement.classList.remove("light", "dark");
+        e.newDocument.documentElement.classList.add(currentTheme);
+      });
+
+      document.addEventListener("astro:after-swap", function () {
+        /* Re-read localStorage and enforce it on the now-live document */
+        try {
+          var stored = localStorage.getItem("theme");
+          if (stored === "light" || stored === "dark") {
+            document.documentElement.classList.remove("light", "dark");
+            document.documentElement.classList.add(stored);
+          }
+        } catch (e) {
+          /* storage blocked — keep whatever class is already set */
+        }
+      });
+    </script>
   </head>
 
   <body>

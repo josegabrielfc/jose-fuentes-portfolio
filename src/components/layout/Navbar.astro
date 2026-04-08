@@ -1,5 +1,6 @@
 ---
 import LangToggle from "../ui/LangToggle";
+import ThemeToggle from "../ui/ThemeToggle";
 import type { Lang } from "../../i18n/utils";
 
 interface Props {
@@ -32,6 +33,7 @@ const { lang, t } = Astro.props;
 
     <!-- Right side actions -->
     <div class="navbar-actions">
+      <ThemeToggle client:load />
       <LangToggle lang={lang} client:load />
       <a href="#contact" class="btn-hire">{t("nav.hire")}</a>
     </div>
@@ -63,6 +65,7 @@ const { lang, t } = Astro.props;
     <div
       style="display: flex; align-items: center; gap: 12px; padding: 1rem 0 0.5rem;"
     >
+      <ThemeToggle client:load />
       <LangToggle lang={lang} client:load />
       <a href="#contact" class="btn-hire">{t("nav.hire")}</a>
     </div>
@@ -84,8 +87,8 @@ const { lang, t } = Astro.props;
   }
 
   .navbar.scrolled {
-    background: rgba(3, 7, 18, 0.8);
-    border-color: rgba(255, 255, 255, 0.08);
+    background: var(--th-bg-nav);
+    border-color: var(--th-border);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
   }
@@ -111,6 +114,8 @@ const { lang, t } = Astro.props;
     height: 45px;
     width: 45px;
     object-fit: contain;
+    filter: var(--th-logo-filter);
+    transition: filter 0.25s ease;
   }
 
   .navbar-links {
@@ -133,7 +138,7 @@ const { lang, t } = Astro.props;
     padding: 6px 12px;
     font-size: 0.875rem;
     font-weight: 500;
-    color: #94a3b8;
+    color: var(--th-text-2);
     text-decoration: none;
     border-radius: 6px;
     transition:
@@ -142,8 +147,8 @@ const { lang, t } = Astro.props;
   }
 
   .nav-link:hover {
-    color: #f1f5f9;
-    background: rgba(255, 255, 255, 0.06);
+    color: var(--th-text-1);
+    background: var(--th-surface-hover);
   }
 
   .navbar-actions {
@@ -202,7 +207,7 @@ const { lang, t } = Astro.props;
   .menu-btn span {
     display: block;
     height: 2px;
-    background: #94a3b8;
+    background: var(--th-text-2);
     border-radius: 2px;
     transition:
       transform 0.25s ease,
@@ -225,9 +230,9 @@ const { lang, t } = Astro.props;
     display: none;
     flex-direction: column;
     padding: 0.5rem clamp(1.25rem, 5vw, 2rem) 1.25rem;
-    background: rgba(3, 7, 18, 0.95);
+    background: var(--th-mobile-menu-bg);
     backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid var(--th-border);
   }
 
   @media (max-width: 768px) {
@@ -250,7 +255,7 @@ const { lang, t } = Astro.props;
     padding: 10px 8px;
     font-size: 1rem;
     font-weight: 500;
-    color: #94a3b8;
+    color: var(--th-text-2);
     text-decoration: none;
     border-radius: 6px;
     transition:
@@ -259,8 +264,8 @@ const { lang, t } = Astro.props;
   }
 
   .mobile-link:hover {
-    color: #f1f5f9;
-    background: rgba(255, 255, 255, 0.06);
+    color: var(--th-text-1);
+    background: var(--th-surface-hover);
   }
 </style>
 

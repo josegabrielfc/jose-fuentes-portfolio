@@ -9,7 +9,7 @@ const { t } = Astro.props;
   <div class="container footer-inner">
     <p class="footer-text">
       {t('footer.made_with')}
-      <span aria-hidden="true" style="color: #2c9cc3;">♥</span>
+      <span aria-hidden="true" style="color: var(--color-accent-light);">♥</span>
       {t('footer.and')}
       <i class="devicon-astro-plain footer-astro-icon" aria-label="Astro" title="Astro"></i>
       {t('footer.by')}
@@ -24,7 +24,7 @@ const { t } = Astro.props;
 
 <style>
   .footer {
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-top: 1px solid var(--th-border);
     padding-block: 1.75rem;
   }
 
@@ -38,7 +38,7 @@ const { t } = Astro.props;
 
   .footer-text {
     font-size: 0.8125rem;
-    color: #475569;
+    color: var(--th-text-3);
     margin: 0;
     display: flex;
     align-items: center;
@@ -53,18 +53,18 @@ const { t } = Astro.props;
     width: 36px;
     height: 36px;
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background: rgba(255, 255, 255, 0.04);
-    color: #64748b;
+    border: 1px solid var(--th-border);
+    background: var(--th-surface);
+    color: var(--th-text-2);
     text-decoration: none;
     transition: all 0.2s ease;
     flex-shrink: 0;
   }
 
   .footer-top:hover {
-    color: #f1f5f9;
-    border-color: rgba(44, 156, 195, 0.4);
-    background: rgba(35, 125, 157, 0.1);
+    color: var(--th-text-1);
+    border-color: var(--th-toggle-border-hover);
+    background: var(--th-toggle-bg-hover);
     transform: translateY(-2px);
   }
 

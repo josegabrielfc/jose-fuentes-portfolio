@@ -17,10 +17,10 @@ export default function LangToggle({ lang }: Props) {
         gap: "6px",
         padding: "6px 12px",
         borderRadius: "8px",
-        border: "1px solid rgba(255,255,255,0.1)",
-        background: "rgba(255,255,255,0.05)",
+        border: "1px solid var(--th-toggle-border)",
+        background: "var(--th-toggle-bg)",
         backdropFilter: "blur(8px)",
-        color: "#94a3b8",
+        color: "var(--th-toggle-color)",
         fontSize: "0.75rem",
         fontFamily: "'JetBrains Mono', monospace",
         fontWeight: "500",
@@ -31,20 +31,20 @@ export default function LangToggle({ lang }: Props) {
       }}
       onMouseEnter={(e) => {
         const el = e.currentTarget;
-        el.style.borderColor = "rgba(35, 125, 157, 0.25)";
-        el.style.color = "#f1f5f9";
-        el.style.background = "rgba(35, 125, 157, 0.12)";
+        el.style.borderColor = "var(--th-toggle-border-hover)";
+        el.style.color = "var(--th-toggle-color-hover)";
+        el.style.background = "var(--th-toggle-bg-hover)";
       }}
       onMouseLeave={(e) => {
         const el = e.currentTarget;
-        el.style.borderColor = "rgba(255,255,255,0.1)";
-        el.style.color = "#94a3b8";
-        el.style.background = "rgba(255,255,255,0.05)";
+        el.style.borderColor = "var(--th-toggle-border)";
+        el.style.color = "var(--th-toggle-color)";
+        el.style.background = "var(--th-toggle-bg)";
       }}
     >
-      <span style={{ color: lang === "en" ? "#f1f5f9" : "#475569" }}>EN</span>
-      <span style={{ color: "#475569" }}>/</span>
-      <span style={{ color: lang === "es" ? "#f1f5f9" : "#475569" }}>ES</span>
+      <span style={{ color: lang === "en" ? "var(--th-text-1)" : "var(--th-text-3)" }}>EN</span>
+      <span style={{ color: "var(--th-text-3)" }}>/</span>
+      <span style={{ color: lang === "es" ? "var(--th-text-1)" : "var(--th-text-3)" }}>ES</span>
     </a>
   );
 }

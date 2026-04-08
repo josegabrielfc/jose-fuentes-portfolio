@@ -41,7 +41,7 @@ export const projects: Project[] = [
     isPrivate: true,
   },
   {
-    slug: "oclina-agenda-web",
+    slug: "clinical-agenda-management",
     title: {
       en: "Clinical Agenda Management",
       es: "Gestión de Agenda Clínica",
@@ -55,10 +55,10 @@ export const projects: Project[] = [
     isPrivate: true,
   },
   {
-    slug: "checkplus",
+    slug: "audit-task-management",
     title: {
-      en: "CheckPlus Platform",
-      es: "Plataforma CheckPlus",
+      en: "Audit & Task Management Platform",
+      es: "Plataforma de Auditoría y Gestión de Tareas",
     },
     description: {
       en: "Platform for auditing and task management. Features custom questionnaire builders, action plans and document generation.",
@@ -69,10 +69,10 @@ export const projects: Project[] = [
     isPrivate: true,
   },
   {
-    slug: "watti-app",
+    slug: "solar-panel-management",
     title: {
-      en: "Watti App",
-      es: "App Watti",
+      en: "Solar Panel Management App",
+      es: "App de Gestión de Paneles Solares",
     },
     description: {
       en: "Mobile app for solar panel auditing and installation management, with real-time charts and energy consumption reports.",
@@ -83,10 +83,10 @@ export const projects: Project[] = [
     isPrivate: true,
   },
   {
-    slug: "nuvi-app",
+    slug: "condominium-management",
     title: {
-      en: "Nuvi App",
-      es: "App Nuvi",
+      en: "Condominium Management App",
+      es: "App de Gestión de Condominios",
     },
     description: {
       en: "Mobile app for condominium management, enhancing communication, operations, and security with integrated features",

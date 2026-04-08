@@ -151,7 +151,7 @@ export const experiences: ExperienceItem[] = [
   {
     company: "Nelumbo Consultores",
     role: { en: "Frontend Developer", es: "Frontend Developer" },
-    period: "Jul 2024 – Present",
+    period: "Jul 2025 – Present",
     bullets: {
       en: [
         "Developed high-performance web modules using React, TypeScript, and Next.js",
